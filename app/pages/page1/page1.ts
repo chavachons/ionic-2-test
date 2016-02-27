@@ -72,8 +72,6 @@ export class Page1 {
 
     QRCodeScaner() {
         this.platform.ready().then(() => {
-            var scaner = cordova.plugins.barcodeScanner;
-            scaner.format='qr_CODE';
             cordova.plugins.barcodeScanner.scan(
                 function(result) {
                     alert("We got a barcode\n" +
