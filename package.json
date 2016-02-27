@@ -18,7 +18,8 @@
   "description": "myApp: An Ionic project",
   "cordovaPlugins": [
     "phonegap-plugin-barcodescanner",
-    "cordova-plugin-camera"
+    "cordova-plugin-camera",
+    "cordova-plugin-x-toast"
   ],
   "cordovaPlatforms": [
     "android",

@@ -109,4 +109,16 @@ export class Page1 {
             );
         });
     }
+
+    takeToast() {
+        this.platform.ready().then(() => {
+            var exitApp: any = 0;
+            if (exitApp == 0) {
+                cordova.plugins.toast.showShortCenter('Press again to exit');
+                exitApp++;
+            } else {
+                navigator.app.exitApp();
+            }
+        });
+    }
 }
