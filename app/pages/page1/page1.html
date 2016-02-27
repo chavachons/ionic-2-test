@@ -1,0 +1,60 @@
+<ion-navbar *navbar>
+    <ion-title>We
+        <ion-icon ios="ios-heart" md="md-heart" red></ion-icon> Order</ion-title>
+</ion-navbar>
+
+<ion-content class="page1">
+    <div class="slides-div">
+        <ion-slides [options]="myTopSlideOptions" id="loopSlider" (change)="onSlideChanged($event)">
+            <ion-slide *ngFor="#slide of slides" [ngClass]="slide.class">
+                <a [href]="slide.link">
+                    <img [src]="slide.img" [alt]="slide.name">
+                </a>
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <div class="menu-div">
+        <ion-row center>
+            <ion-col width-50 (click)="QRCodeScaner()">
+                <div class="menu-button">
+                    <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
+                    <p>QR Code Scaner</p>
+                </div>
+            </ion-col>
+            <ion-col width-50>
+                <div class="menu-button">
+                    <ion-icon ios="ios-pizza" md="md-pizza"></ion-icon>
+                    <p>Restaurants</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row center>
+            <ion-col width-50 (click)="goToFavoritePage()">
+                <div class="menu-button">
+                    <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+                    <p>Favorite Menu</p>
+                </div>
+            </ion-col>
+            <ion-col width-50>
+                <div class="menu-button">
+                    <ion-icon ios="ios-clipboard" md="md-clipboard"></ion-icon>
+                    <p>Order</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row center>
+            <ion-col width-50>
+                <div class="menu-button">
+                    <ion-icon ios="ios-paper" md="md-paper"></ion-icon>
+                    <p>Total</p>
+                </div>
+            </ion-col>
+            <ion-col width-50>
+                <div class="menu-button">
+                    <ion-icon ios="ios-settings" md="md-settings"></ion-icon>
+                    <p>Setting</p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

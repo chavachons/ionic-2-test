@@ -1,0 +1,52 @@
+<ion-navbar *navbar>
+    <ion-title>
+        Menu View
+    </ion-title>
+</ion-navbar>
+
+<ion-content class="page3">
+    <h1>Test1</h1>
+    <h1>Test2</h1>
+    <div class="segment-div">
+        <ion-segment [(ngModel)]="pet">
+            <ion-segment-button value="Menu">
+                <ion-icon ios="ios-book" md="md-book"></ion-icon>
+                Menu
+            </ion-segment-button>
+            <ion-segment-button value="Photos">
+                <ion-icon ios="ios-images" md="md-images"></ion-icon>
+                Photos
+            </ion-segment-button>
+            <ion-segment-button value="Map">
+                <ion-icon ios="ios-map" md="md-map"></ion-icon>
+                Map
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div class="segmentView-div" [ngSwitch]="pet">
+        <ion-list *ngSwitchWhen="'Menu'">
+            
+        </ion-list>
+
+        <ion-list *ngSwitchWhen="'Photos'">
+            <ion-item>
+                <ion-thumbnail item-left>
+                    <img src="img/thumbnail-kitten-1.jpg">
+                </ion-thumbnail>
+                <h2>Luna</h2>
+            </ion-item>
+            ...
+        </ion-list>
+
+        <ion-list *ngSwitchWhen="'Map'">
+            <ion-item>
+                <ion-thumbnail item-left>
+                    <img src="img/thumbnail-kitten-1.jpg">
+                </ion-thumbnail>
+                <h2>Luna</h2>
+            </ion-item>
+            ...
+        </ion-list>
+    </div>
+</ion-content>

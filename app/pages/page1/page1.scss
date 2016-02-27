@@ -1,0 +1,46 @@
+.page1 {
+    .red{
+        background: #f00;
+    }
+    .green{
+        background: #0f0;
+    }
+    .blue{
+        background: #00f;
+    }
+    .slides-div{
+        height: 30%;
+    }
+    .menu-div{
+        height: 70%;
+        ion-row{
+            height: 33.33%;
+            margin: 0;
+            padding: 0;
+            ion-col{
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+                height: 100%;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;  
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+            }
+        }
+        .menu-button{
+            text-align: center;
+            margin: auto;
+            color: #1abc9c;
+            p{
+                color: #1abc9c;
+            }
+        }
+        ion-icon{
+            font-size: 3em;
+        }
+    }
+}

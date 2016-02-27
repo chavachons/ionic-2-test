@@ -1,0 +1,24 @@
+.page3 {
+    background: #ededed;
+    .segment-div{
+        background: #fff;
+        .segment-button{
+            height: auto;
+            color: #1abc9c;
+            border: 0px;
+            border-bottom: 3px solid #fff;
+            line-height: 1em;
+            padding: 0.5em 0;
+            &.segment-activated{
+                background: #fff;
+                border-bottom: 3px solid #1abc9c;
+            }
+        }
+        ion-icon{
+            display: block;
+        }
+    }
+    .segmentView-div{
+        height: 100%;   
+    }
+}
